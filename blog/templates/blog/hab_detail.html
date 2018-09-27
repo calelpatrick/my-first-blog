@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+    {% block content %}
+        <div class="post">
+            {% if pkh.Numero_hab %}
+                <div class="date">
+                    {{ pkh.Precio }}
+                </div>
+            {% endif %}
+            <h1>{{ pkh.Numero_hab }}</h1>
+        </div>
+    {% endblock %}

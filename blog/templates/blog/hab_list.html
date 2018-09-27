@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+<body>
+<h1>Listado de Habitaciones</h1>
+{%block content %}
+{% for hab in habs %}
+        <div class="post">
+            <p>Precio: {{ hab.Precio }}</p>
+            <h1><a href="{% url 'blog.views.hab_detail' pk=hab.pk%}">{{ hab.Numero_hab}}</a></h1>
+            
+        </div>
+    {% endfor %}
+    {% endblock content %}
+</body>
+</html>
