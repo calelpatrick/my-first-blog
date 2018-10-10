@@ -5,10 +5,10 @@
 {% for post in posts %}
         <div class="post">
           <div class="date">
-            <h4>Fecha de Publicacion</h4>          
+            <h4>Fecha de Publicacion</h4>
               {{ post.published_date }}
           </div>
-            <h1><a href="{% url 'blog.views.post_detail' pk=post.pk%}">{{ post.title }}</a></h1>
+            <h1><a href="{% url 'blog.views.post_detail' pk=post.pk%}" target="_blank">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
 
         </div>
